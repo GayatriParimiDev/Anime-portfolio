@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night-sky: #0a0a1a;
+  --color-moonlight: #fdf6e3;
+  --color-parchment: #f0e6d2;
+  --color-sakura-light: #ffb7c5;
+  --color-sakura-dark: #e099a8;
+  --color-accent-gold: #ffd700;
+  
+  --font-cinematic: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+:root {
+  --background: var(--color-night-sky);
+  --foreground: var(--color-moonlight);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.text-glow {
+  text-shadow: 0 0 10px rgba(253, 246, 227, 0.5);
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

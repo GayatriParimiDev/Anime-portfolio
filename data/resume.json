@@ -1,0 +1,63 @@
+{
+  "personal": {
+    "name": "Gayatri Parimi",
+    "role": "Undergraduate Student / Data Analyst",
+    "tagline": "Crafting digital experiences with data and code.",
+    "email": "work.gayatriparimi@gmail.com",
+    "contact": "9587806625",
+    "location": "Gujarat Vidyapith, India",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/parimi-gayatri-682b04314",
+      "github": "https://github.com/GayatriParimiDev"
+    }
+  },
+  "experience": [
+    {
+      "company": "Edulyt India",
+      "location": "Delhi",
+      "role": "Data Analyst Intern",
+      "period": "2nd May 2025 - 2nd July 2025",
+      "description": "Worked upon live projects using key technologies and sharpened skills in data analysis."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cafe Finder",
+      "tagline": "Find the cafes near you.",
+      "description": "A responsive and interactive web application built using HTML, CSS, and JavaScript. Enables users to discover best cafés near their current location. Integrates Leaflet.js, OpenStreetMap, and Geoapify API for accurate mapping and navigation.",
+      "tech": ["HTML", "CSS", "JavaScript", "Leaflet.js", "Geoapify API"],
+      "link": "https://github.com/"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Gujarat Vidyapith",
+      "degree": "BCA (Pursuing)",
+      "year": "Present"
+    },
+    {
+      "institution": "KV No.1 Shahibaug, Ahmedabad",
+      "degree": "12th (SSC - Commerce)",
+      "year": "2022 - 2023",
+      "score": "71.2%"
+    },
+    {
+      "institution": "KV, Rajkot",
+      "degree": "10th (HSC)",
+      "year": "2020 - 2021",
+      "score": "80%"
+    }
+  ],
+  "skills": {
+    "technical": ["Python", "Java", "C", "SQL", "OS", "Network", "JavaScript", "Data Analysis", "DSA"],
+    "soft": ["Presentation", "Communication", "Networking"],
+    "spoken": ["English", "Telugu", "Hindi", "Gujarati"]
+  },
+  "certifications": [
+    "Deloitte Data Analytics Job Simulation",
+    "Microsoft Learn Badges (Data Analysis & Power BI)",
+    "AWS Innovate Attendee",
+    "Gujarat Vidyapith Cyber Security Awareness Workshop",
+    "AWS Generative AI Revolution Webinar"
+  ]
+}
