@@ -56,14 +56,10 @@ export default function JourneyMap() {
                                 </span>
                                 <h3 className="text-xl font-bold text-[#f0e6d2] group-hover:text-[#ffd700] transition-colors">{item.title}</h3>
                                 <h4 className="text-md text-[#a0a0c0] italic mb-2">{item.subtitle}</h4>
-                                {/* @ts-expect-error - description exists on some types */}
-                                {item.description && (
-                                    // @ts-expect-error - description exists on some types
+                                {"description" in item && (
                                     <p className="text-sm text-gray-300 leading-relaxed">{item.description}</p>
                                 )}
-                                {/* @ts-expect-error - score exists on education */}
-                                {item.score && (
-                                    // @ts-expect-error - score exists on education
+                                {"score" in item && item.score && (
                                     <div className="mt-2 inline-block px-3 py-1 text-xs bg-[#ffd700]/10 text-[#ffd700] rounded-full border border-[#ffd700]/20">
                                         Score: {item.score}
                                     </div>
