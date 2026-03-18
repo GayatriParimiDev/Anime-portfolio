@@ -23,7 +23,7 @@
       "company": "India Space Lab",
       "location": "Online",
       "role": "Technical Trainee",
-      "period": "Feb 2026 - Present",
+      "period": "Feb 2026 - March 2026",
       "description": "Selected for a competitive Winter Internship Technical Training Program with hands-on exposure to advanced engineering domains."
     },
     {
@@ -47,7 +47,7 @@
       "tagline": "AI-powered learning companion.",
       "description": "AI-powered mobile app that personalizes education pathways based on user profiles, goals, and learning preferences.",
       "tech": ["React Native", "Node.js", "AI/ML"],
-      "repo": "https://github.com/GayatriParimiDev",
+      "repo": "https://github.com/GayatriParimiDev/SkillPath",
       "live": ""
     },
     {
@@ -55,7 +55,7 @@
       "tagline": "Automated ocean insights.",
       "description": "End-to-end ML system analyzing ocean datasets to generate automated environmental insights with preprocessing, modeling, and visualization.",
       "tech": ["Python", "Machine Learning", "Data Viz"],
-      "repo": "https://github.com/GayatriParimiDev",
+      "repo": "https://github.com/GayatriParimiDev/AquaInsights",
       "live": ""
     },
     {
@@ -63,16 +63,23 @@
       "tagline": "Find cafés near you.",
       "description": "Responsive web app to locate nearby cafés using location or city search, with real-time map visualization.",
       "tech": ["JavaScript", "Leaflet.js", "OpenStreetMap", "Geoapify"],
-      "repo": "https://github.com/GayatriParimiDev",
-      "live": ""
+      "repo": "https://github.com/GayatriParimiDev/Cafe_Finder",
+      "live": "https://gayatriparimidev.github.io/Cafe_Finder/"
     },
     {
       "name": "Netflix Data Analysis",
       "tagline": "EDA on Netflix titles.",
       "description": "Exploratory data analysis on the Netflix titles dataset uncovering content trends by type, genre, country, and year with rich visual storytelling.",
       "tech": ["Python", "Pandas", "Seaborn", "Plotly"],
-      "repo": "https://github.com/GayatriParimiDev",
+      "repo": "https://github.com/GayatriParimiDev/Netflix_Data-Analysis",
       "live": ""
+    },
+    {
+      "name": "Babitas Kitchen",
+      "tagline": "True Taste of home,wherever you roam.",
+      "description": "Babita's Kitchen is a premium, full-stack food delivery platform designed to bring the authentic warmth of home-cooked Indian meals to Bengaluru. The application features a deeply immersive UI inspired by a traditional Indian kitchen",
+      "tech": ["JavaScript", "React", "Express.js", "Supabase(PostgreSQL)", "Tailwind CSS"],
+      "live": "https://babitas-kitchen.vercel.app/"
     }
   ],
   "education": [
@@ -96,7 +103,7 @@
     }
   ],
   "skills": {
-    "technical": ["Python", "Java", "C", "SQL", "OS", "Network", "JavaScript", "Data Analysis", "DSA"],
+    "technical": ["Python", "Java", "C", "SQL", "OS", "Network", "JavaScript", "Data Analysis", "DSA","React","React Native"],
     "soft": ["Presentation", "Communication", "Networking"],
     "spoken": ["English", "Telugu", "Hindi", "Gujarati"]
   },
