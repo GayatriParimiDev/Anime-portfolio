@@ -13,39 +13,86 @@
   },
   "experience": [
     {
+      "company": "YugYatra OPC Pvt. Limited",
+      "location": "Online",
+      "role": "Software Engineer Intern",
+      "period": "Jan 2026 - Present",
+      "description": "Contributing to full-cycle application development including design, coding, testing, and deployment in a professional Agile environment."
+    },
+    {
+      "company": "India Space Lab",
+      "location": "Online",
+      "role": "Technical Trainee",
+      "period": "Feb 2026 - Present",
+      "description": "Selected for a competitive Winter Internship Technical Training Program with hands-on exposure to advanced engineering domains."
+    },
+    {
+      "company": "Gujarat Vidyapith",
+      "location": "Ahmedabad",
+      "role": "Student Administrator – Women Development Cell",
+      "period": "Sep 2025 - Present",
+      "description": "Led coordination and execution of women empowerment initiatives; demonstrated leadership, event management, and stakeholder communication."
+    },
+    {
       "company": "Edulyt India",
       "location": "Delhi",
       "role": "Data Analyst Intern",
-      "period": "2nd May 2025 - 2nd July 2025",
-      "description": "Worked upon live projects using key technologies and sharpened skills in data analysis."
+      "period": "May 2025 - Jul 2025",
+      "description": "Analyzed live datasets using Python & SQL; cleaned and preprocessed data and delivered analytical reports supporting strategic business decisions."
     }
   ],
   "projects": [
     {
+      "name": "SkillPath – AI Learning Assistant",
+      "tagline": "AI-powered learning companion.",
+      "description": "AI-powered mobile app that personalizes education pathways based on user profiles, goals, and learning preferences.",
+      "tech": ["React Native", "Node.js", "AI/ML"],
+      "repo": "https://github.com/GayatriParimiDev",
+      "live": ""
+    },
+    {
+      "name": "Aqua Insights – AI Ocean Analyzer",
+      "tagline": "Automated ocean insights.",
+      "description": "End-to-end ML system analyzing ocean datasets to generate automated environmental insights with preprocessing, modeling, and visualization.",
+      "tech": ["Python", "Machine Learning", "Data Viz"],
+      "repo": "https://github.com/GayatriParimiDev",
+      "live": ""
+    },
+    {
       "name": "Cafe Finder",
-      "tagline": "Find the cafes near you.",
-      "description": "A responsive and interactive web application built using HTML, CSS, and JavaScript. Enables users to discover best cafés near their current location. Integrates Leaflet.js, OpenStreetMap, and Geoapify API for accurate mapping and navigation.",
-      "tech": ["HTML", "CSS", "JavaScript", "Leaflet.js", "Geoapify API"],
-      "link": "https://github.com/"
+      "tagline": "Find cafés near you.",
+      "description": "Responsive web app to locate nearby cafés using location or city search, with real-time map visualization.",
+      "tech": ["JavaScript", "Leaflet.js", "OpenStreetMap", "Geoapify"],
+      "repo": "https://github.com/GayatriParimiDev",
+      "live": ""
+    },
+    {
+      "name": "Netflix Data Analysis",
+      "tagline": "EDA on Netflix titles.",
+      "description": "Exploratory data analysis on the Netflix titles dataset uncovering content trends by type, genre, country, and year with rich visual storytelling.",
+      "tech": ["Python", "Pandas", "Seaborn", "Plotly"],
+      "repo": "https://github.com/GayatriParimiDev",
+      "live": ""
     }
   ],
   "education": [
     {
       "institution": "Gujarat Vidyapith",
-      "degree": "BCA (Pursuing)",
-      "year": "Present"
+      "degree": "B.C.A. – Bachelor of Computer Applications",
+      "year": "Aug 2023 - Present",
+      "score": "CGPA: 7.7/10"
     },
     {
-      "institution": "KV No.1 Shahibaug, Ahmedabad",
-      "degree": "12th (SSC - Commerce)",
-      "year": "2022 - 2023",
-      "score": "71.2%"
+      "institution": "Kendriya Vidyalaya Shahibaug No.1",
+      "degree": "12th SSC",
+      "year": "2021 - 2023",
+      "score": "Percentage: 72.1%"
     },
     {
-      "institution": "KV, Rajkot",
-      "degree": "10th (HSC)",
+      "institution": "Kendriya Vidyalaya Rajkot",
+      "degree": "10th HSC",
       "year": "2020 - 2021",
-      "score": "80%"
+      "score": "Percentage: 80%"
     }
   ],
   "skills": {

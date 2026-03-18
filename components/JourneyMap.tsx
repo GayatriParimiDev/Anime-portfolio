@@ -9,8 +9,46 @@ export default function JourneyMap() {
     const journeyItems = [
         ...resumeData.experience.map((e) => ({ type: "experience", ...e, title: e.role, subtitle: e.company, year: e.period })),
         ...resumeData.education.map((e) => ({ type: "education", ...e, title: e.degree, subtitle: e.institution, year: e.year })),
-    ].sort((a, b) => { // Simple sort logic (improvements can be made for complex dates)
-        return a.year.includes("Present") ? -1 : 1;
+    ].sort((a, b) => {
+        const toSortKey = (value: string) => {
+            const present = /present/i.test(value);
+            const yearMatches = value.match(/(19|20)\d{2}/g) || [];
+
+            const monthMap: Record<string, number> = {
+                jan: 0,
+                feb: 1,
+                mar: 2,
+                apr: 3,
+                may: 4,
+                jun: 5,
+                jul: 6,
+                aug: 7,
+                sep: 8,
+                oct: 9,
+                nov: 10,
+                dec: 11,
+            };
+
+            const monthMatch = value.toLowerCase().match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/);
+            const month = monthMatch ? monthMap[monthMatch[1]] : 0;
+
+            const endYear = yearMatches.length ? Number(yearMatches[yearMatches.length - 1]) : 0;
+            const startYear = yearMatches.length ? Number(yearMatches[0]) : endYear;
+            const effectiveYear = present ? 9999 : endYear || startYear;
+
+            return {
+                present,
+                effectiveYear,
+                month,
+            };
+        };
+
+        const ak = toSortKey(a.year);
+        const bk = toSortKey(b.year);
+
+        if (ak.present !== bk.present) return ak.present ? -1 : 1;
+        if (ak.effectiveYear !== bk.effectiveYear) return bk.effectiveYear - ak.effectiveYear;
+        return bk.month - ak.month;
     });
 
     return (
