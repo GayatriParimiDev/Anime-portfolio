@@ -32,18 +32,44 @@ export default function ProjectShowcase() {
 
     const projects = useMemo(() => resumeData.projects as Project[], []);
 
+    const manualRepoKeys = useMemo(() => {
+        const normalize = (v: string) => v.trim().toLowerCase().replace(/\.git$/, "");
+        const keys = new Set<string>();
+
+        for (const p of projects) {
+            if (p.repo) keys.add(normalize(p.repo));
+            keys.add(normalize(p.name.replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")));
+        }
+
+        return keys;
+    }, [projects]);
+
     useEffect(() => {
+        const controller = new AbortController();
         let cancelled = false;
 
         const load = async () => {
             try {
-                const res = await fetch("/api/github", { method: "GET" });
+                const res = await fetch("/api/github", { method: "GET", signal: controller.signal });
                 if (!res.ok) {
                     throw new Error(`GitHub fetch failed: ${res.status}`);
                 }
                 const data = (await res.json()) as { repos: GithubRepo[] };
                 if (!cancelled) {
-                    setGithubRepos(Array.isArray(data?.repos) ? data.repos : []);
+                    const repos = Array.isArray(data?.repos) ? data.repos : [];
+                    const seen = new Set<string>();
+                    const normalize = (v: string) => v.trim().toLowerCase().replace(/\.git$/, "");
+
+                    const filtered = repos.filter((r) => {
+                        const urlKey = normalize(r.html_url);
+                        const nameKey = normalize(r.name);
+                        if (manualRepoKeys.has(urlKey) || manualRepoKeys.has(nameKey)) return false;
+                        if (seen.has(urlKey)) return false;
+                        seen.add(urlKey);
+                        return true;
+                    });
+
+                    setGithubRepos(filtered);
                 }
             } catch {
                 if (!cancelled) {
@@ -55,8 +81,9 @@ export default function ProjectShowcase() {
         load();
         return () => {
             cancelled = true;
+            controller.abort();
         };
-    }, []);
+    }, [manualRepoKeys]);
 
     return (
         <section className="min-h-screen py-20 px-6 max-w-7xl mx-auto">
